@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css" >
+</head>
+<body class="container-fluid ">
+	<div class="card"  style="margin:auto;margin-top: 50px;width: 600px;">
+	<h2 class="bg-danger text-white card-header">Registration Form</h2>
+<form class="form card" action="register" method="post" >
+	
+	<table class="table table-hover table-striped">
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td>DOB</td>
+			<td><input type="date" name="dob"></td>
+		</tr>
+		<tr>
+			<td>Gender</td>
+			<td>
+				<input type="radio" name="gender" value="Male">Male
+				<input type="radio" name="gender" value="Female">Female
+			</td>
+		</tr>
+		<tr>
+			<td>Qualification</td>
+			<td>
+				<select name="qlfy">
+					<option value="" selected="selected">Select</option>
+					<option value="BCA">BCA</option>
+					<option value="B.Tec">B.Tec</option>
+					<option value="BA">BA</option>
+					<option value="CS">CS</option>
+				</select>
+		    </td>
+		</tr>
+		<tr>
+			<td>Hobbies</td>
+			<td>
+			<input type="checkbox" name="hb" value="Travel">Travel
+			<input type="checkbox" name="hb" value="Movies">Movies
+			<input type="checkbox" name="hb" value="reading">Reading
+			<input type="checkbox" name="hb" value="Cricket">Cricket
+			<input type="checkbox" name="hb" value="Travel">Travel
+		</tr>
+		<tr>
+			<td><input type="submit" value="register" class="btn btn-outline-success"></td>
+			<td><input type="reset" value="clear" class="btn btn-outline-danger"></td>
+		</tr>
+	</table>
+</form>
+</div>
+</body>
+</html>

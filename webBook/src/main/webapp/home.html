@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web app</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="container-fluid card" style="width:35rem;">
+   <h1 class="bg-danger text-white text-center">Book Registration Form</h1>
+   <form action="register" method="post">
+	   <table class="table table-hover">
+		   <tr>
+		   <td>Book Name</td>
+		   <td><input type="text" name="bookName"></td>
+		   </tr>
+		   <tr>
+		   <td>Book Edition</td>
+		   <td><input type="text" name="bookeEditio"></td>
+		   </tr>
+		   <tr>
+		   <td>Book Price</td>
+		   <td><input type="text" name="bookPrice"></input></td>
+		   </tr>
+		   <tr>
+		   <td><input type="submit" value="register"></input></td>
+		   <td><input type="reset" value="cancel"></input> </td>
+		   </tr>
+	   </table>	  
+   </form>
+   <a href="bookList">Book List</a>
+</body>
+</html>
