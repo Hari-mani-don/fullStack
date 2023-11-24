@@ -19,13 +19,7 @@ public class LoginServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//content type set
-		PrintWriter pw = response.getWriter();
-		
-				response.setContentType("text/html; charset = UTF-8");
-				//Print Writer
-				
-				pw.println("This is a login hair");
+	
 				
 	}
 
@@ -35,20 +29,19 @@ public class LoginServlet extends HttpServlet {
 				response.setContentType("text/html; charset = UTF-8");
 				//Print Writer
 				PrintWriter pw = response.getWriter();
-					pw.println("This is a login mani");
+					
 		   String email = request.getParameter("login-email");
 		   String password = request.getParameter("login-password");
-		   
-		System.out.println(email + password);
 		 
 			  UserDao udao;
 			try {
 				udao = new UserDao(DataBaseConnection.getConnection());
-				 user use =  udao.userLogin("email", "password");
+				user use = udao.userLogin(email, password);
 				  if(use != null) {
-					  pw.println("login succiss");
-				  }else {
-					  pw.println("login failed");
+					 request.getSession().setAttribute("auth", use);
+					 response.sendRedirect("index.jsp");
+					 }else {
+					  response.sendRedirect("login.jsp");
 				  }
 			} catch (ClassNotFoundException | SQLException e) {
 				

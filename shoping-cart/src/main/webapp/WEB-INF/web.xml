@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
- 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  
-   <display-name>shoping-cart</display-name>
+  <display-name>shoping-cart</display-name>
+  <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.shopingcart.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddToCartServlet</display-name>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <servlet-class>com.shopingcart.servlet.AddToCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddToCartServlet</servlet-name>
+    <url-pattern>/AddToCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QuantityIncreDecre</display-name>
+    <servlet-name>QuantityIncreDecre</servlet-name>
+    <servlet-class>com.shopcart.dao.QuantityIncreDecre</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuantityIncreDecre</servlet-name>
+    <url-pattern>/QuantityIncreDecre</url-pattern>
+  </servlet-mapping>
 </web-app>

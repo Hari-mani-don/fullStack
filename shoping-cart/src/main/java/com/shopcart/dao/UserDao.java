@@ -21,16 +21,18 @@ public class UserDao {
     	  try {
     		  query = "SELECT * FROM users where email=? and password=?";
     		  
-    		  pst = this.con.prepareStatement("query");
+    		  pst = this.con.prepareStatement(query);
     		  pst.setString(1, email);
     		  pst.setString(2, password);
+    		
     		  rs = pst.executeQuery();
-    		  
     		  if(rs.next()) {
+    			 
     			   use = new user();
     			   use.setId(rs.getInt("id"));
     			   use.setName(rs.getString("name"));
     			   use.setEmail(rs.getString("email"));
+    			  
     		  }
     		  
     	  }catch(Exception e) {
